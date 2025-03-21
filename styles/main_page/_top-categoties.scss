@@ -1,0 +1,137 @@
+@use "../mixins" as mixin;
+@use "../variables" as var;
+
+.explore-top-categories {
+  h2 {
+    @include mixin.h2;
+    text-align: left;
+
+    @media (max-width: 900px) {
+      font-size: 24px;
+    }
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+    li {
+      max-width: 135px;
+      max-height: 112px;
+      border-radius: 8px;
+      background-color: var.$block-color;
+      cursor: pointer;
+      &:hover {
+        background-color: #69adb931;
+        transition: all 0.5s;
+      }
+      .explore-top-categories__link-container {
+        padding: 15px 15px;
+        max-height: 112px;
+        max-width: 135px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+      }
+      a {
+        text-decoration: none;
+        color: var.$text-color;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+      }
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .explore-top-categories {
+    max-width: 900px;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 155px);
+      gap: 16px;
+      justify-content: center;
+  }
+  }
+
+  .explore-top-categories-link-container {
+    a {
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: 930px) {
+  .explore-top-categories {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .explore-top-categories-link-container {
+    a {
+      font-size: 16px;
+    }
+  }
+  .explore-top-categories {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 155px);
+      gap: 16px;
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .explore-top-categories {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .explore-top-categories-link-container {
+    a {
+      font-size: 14px;
+    }
+  }
+  .explore-top-categories {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      justify-content: center;
+    }
+  }
+
+  .explore-top-categories ul {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .explore-top-categories {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .explore-top-categories h2{
+    margin-left: -35px;
+  }
+
+  .explore-top-categories-link-container {
+    a {
+      font-size: 16px;
+    }
+  }
+  .explore-top-categories {
+    ul {
+      grid-template-columns: repeat(2, 135px);
+    }
+  }
+}
+

@@ -1,0 +1,351 @@
+@use "../variables" as var;
+@use "../mixins" as mixin;
+@use "../reset";
+
+.events-near {
+  max-width: 1196px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__head-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    h2 {
+      @include mixin.h2;
+      @media (max-width: 900px) {
+        font-size: 24px;
+      }
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.events-near__link-container {
+  width: 240px;
+  height: 44px;
+  background-color: #97cad11f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  color: var.$main-primary-blue-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var.$main-primary-blue-color;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var.$main-primary-blue-color;
+  }
+}
+.see-all-events-link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var.$main-primary-blue-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var.$main-primary-blue-color;
+  }
+}
+.events-near__events-list {
+  padding-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 36px;
+  row-gap: 56px;
+  li,a {
+    text-decoration: none;
+    color: var.$text-color;
+    &:hover h3 {
+      text-decoration: underline;
+      text-decoration-color: var.$text-color;
+    }
+  }
+}
+
+.see-all-events-link-mobile {
+  display: none;
+}
+
+.events__list-item--date--mobile {
+  display: none;
+  text-transform: uppercase;
+}
+
+.events__list-item--text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.events__list-item--title {
+  max-width: 274px;
+  padding-right: 50px;
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+
+.events__list-item--location {
+  margin: 20px 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: var.$text-grey-color;
+}
+
+.events__list-item--data-container--desktop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  color: var.$text-color;
+}
+
+.events__list-item--ticket-container {
+  display: flex;
+  margin-top: 12px;
+  gap: 16px;
+}
+
+.events__going-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.events__ticket-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.events__attendees-mobile {
+  display: none;
+}
+
+.events__img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.events__img:hover {
+  transform: scale(0.95);
+}
+
+@media (max-width: 1250px) {
+  .events-near__events-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 930px) {
+  .events-near {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .events-near__events-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .events-near__head-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .see-all-events-link {
+    display: none;
+  }
+
+  .see-all-events-link-mobile {
+    display: block;
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var.$main-primary-blue-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: var.$main-primary-blue-color;
+    }
+  }
+
+  .events-near__link-container {
+    width: 164.07px;
+    height: 30.15px;
+    padding: 8px;
+    border-radius: 6px;
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 17px;
+    }
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .events-near__events-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 30px;
+    margin: 0 auto;
+  }
+
+  .events__img img {
+    max-width: 230px;
+  }
+
+  .events__list-item--text-container {
+    max-width: 230px;
+
+    h3 {
+      font-size: 16px;
+      padding-right: 10px;
+    }
+  }
+
+  .events__list-item--location {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+  }
+
+  .events__list-item--data-container--desktop {
+    font-size: 12px;
+  }
+
+  .events__list-item--ticket-container {
+    max-width: 230px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .events-near {
+    max-width: 360px;
+    margin: 0 auto;
+    &__head-container {
+      gap: 10px;
+    }
+  }
+
+  .events__list-item--text-container {
+
+    h3 {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 14.71px;
+      padding-right: 10px;
+    }
+  }
+
+  .events__list-item a {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+   }
+
+  .events__img img{
+    width: 130px;
+    height: 80px;
+  }
+
+  .events-near__events-list {
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    li {
+      text-decoration: none;
+      color: var.$text-color;
+      padding-top: 10px;
+      border-top: 0.61px solid #d9d9d9;
+    }
+  }
+
+  .see-all-events-link-mobile {
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .events__list-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .events__list-item--date--mobile {
+    display: block;
+    margin-top: 3px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #7C6F50;
+  }
+
+  .events__list-item--text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .events__list-item--title {
+    padding-right: 20px;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
+    color: var.$text-color;
+  }
+
+  .events__list-item--location {
+    margin-top: 3px;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+  }
+
+  .events__attendees-mobile {
+    display: block;
+    color: var.$text-grey-color;
+    margin-top: 15px;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 12.05px;
+    text-align: left;
+  }
+
+  .events__list-item--data-container--desktop {
+    display: none;
+  }
+
+  .events__list-item--ticket-container {
+    display: none;
+  }
+}

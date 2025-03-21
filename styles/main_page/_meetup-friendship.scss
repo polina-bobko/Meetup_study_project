@@ -1,0 +1,201 @@
+@use "../mixins" as mixin;
+@use "../variables" as var;
+
+.friendship-on-meetup {
+  h2 {
+    @include mixin.h2;
+    @media (max-width: 900px) {
+      font-size: 24px;
+    }
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var.$text-grey-color;
+    margin-top: 16px;
+  }
+
+  &__container {
+    margin-top: 28px;
+    display: flex;
+    gap: 32px;
+  }
+
+  &__article {
+    // делят свободное пространство поровну
+    flex-basis: 0;
+    flex-grow: 1;
+    img {
+      width: 100%;
+      height: 191px;
+    }
+    h4 {
+      margin-top: 24px;
+      max-width: 300px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      color: var.$text-color;
+      text-decoration: none;
+    }
+    a {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-decoration: none;
+
+      &:hover .friendship-on-meetup__read-more {
+        text-decoration: underline;
+        text-decoration-color: var.$main-primary-blue-color;
+      }
+    }
+
+    &-text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      padding-top: 12px;
+      color: var.$text-grey-color;
+    }
+  }
+
+  &__read-more {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-top: 12px;
+    color: var.$main-primary-blue-color;
+  }
+}
+
+.friendship-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.friendship-img:hover {
+  transform: scale(0.9);
+}
+
+@media (max-width: 1300px) {
+  .friendship-on-meetup__article {
+    // max-width: 300px;
+    img {
+      width: 100%;
+      height: 90%;
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .friendship-on-meetup {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .friendship-on-meetup {
+    text-align: start;
+  }
+
+  .friendship-on-meetup__text {
+    display: none;
+  }
+
+  .friendship-on-meetup__article {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .friendship-on-meetup__article-text {
+    font-size: 14px;
+    max-width: 370px;
+  }
+
+  .friendship-on-meetup {
+    &__container {
+      margin-top: 25px;
+      flex-direction: column;
+    }
+
+    &__article {
+      img {
+        width: 376px;
+        height: 191px;
+      }
+      h4 {
+        margin-top: 15px;
+        max-width: 300px;
+        font-size: 18px;
+      }
+    }
+
+    &__read-more {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+    .friendship-on-meetup {
+        max-width: 500px;
+    }
+
+  .friendship-on-meetup__text {
+    padding-right: 20px;
+    display: none;
+  }
+  .friendship-on-meetup__container {
+    flex-direction: column;
+    img {
+      width: 360px;
+      height: 183px;
+    }
+  }
+}
+@media (max-width: 576px) {
+    .friendship-on-meetup {
+        max-width: 350px;
+        margin: 0 auto 80px;
+      }
+    .friendship-on-meetup__article {
+        max-width: 350px;
+        margin: 0 auto;
+      }
+  .friendship-on-meetup__article {
+    h4 {
+      font-size: 16px;
+    }
+  }
+
+  .friendship-on-meetup__article {
+    h4 {
+      margin-top: 15px;
+      max-width: 260px;
+      font-size: 16px;
+    }
+  }
+
+  .friendship-on-meetup__article-text {
+    font-size: 12px;
+    margin-top: 12px;
+    padding-right: 50px;
+    padding-top: unset;
+  }
+  .friendship-on-meetup__read-more {
+    font-size: 12px;
+    margin-top: 15px;
+    padding-top: unset;
+  }
+
+  .friendship-on-meetup__container {
+    img {
+      width: 350px;
+      height: 183px;
+    }
+  }
+}

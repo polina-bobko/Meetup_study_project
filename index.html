@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://secure.meetupstatic.com/next/images/general/favicon.ico"
+      type="image/x-icon"
+      sizes="any"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="./choices.min.css"> -->
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Meetup | Platform</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__left">
+          <a href="./index.html">
+            <img
+              src="./assets/svg/logo.svg"
+              alt="main logo icon"
+              class="header__left-logo"
+            />
+          </a>
+          <div class="search">
+            <input
+              class="search__input"
+              type="text"
+              placeholder="Search event"
+            />
+            <input
+              class="search__city"
+              type="text"
+              value="Mountain View, CA"
+              placeholder="City"
+            />
+            <button href="#" id="search-btn" class="search__btn">
+              <img
+                src="./assets/svg/search_btn.svg"
+                alt="search icon"
+                class="search__icon"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="header__right-language-dropdown">
+            <div class="header__right-language-dropdown--icon-container">
+              <img
+                src="./assets/svg/language.svg"
+                alt="language icon"
+                class="header__right-language-dropdown--icon"
+              />
+            </div>
+            <div class="language-selector">
+              <button class="selected-language">English</button>
+              <ul class="languages">
+                <li data-value="en" class="selected">English</li>
+                <li data-value="ru">Русский</li>
+                <li data-value="fr">Français</li>
+                <li data-value="de">Deutsch</li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__right-registration-buttons">
+            <button class="header__right-registration-buttons--login-btn">
+              Log in
+            </button>
+            <button class="header__right-registration-buttons--signup-btn">
+              Sign up
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <section class="intro">
+          <div class="intro__container">
+            <div class="intro__text-container">
+              <h1>The people platform—Where interests become friendships</h1>
+              <p>
+                Whatever your interest, from hiking and reading to networking
+                and skill sharing, there are thousands of people who share it on
+                Meetup. Events are happening every day—sign up to join the fun.
+              </p>
+              <div class="intro__btn-container">
+                <a href="./events.html" target="_blank" class="intro__btn"
+                  >Join Meetup</a
+                >
+              </div>
+            </div>
+            <div class="intro__img-container">
+              <img
+                class="intro__img"
+                src="./assets/images/team_on_bicycle.svg"
+                alt="Friends are on the bike"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="events-near">
+          <div class="events-near__header">
+            <div class="events-near__head-container">
+              <h2>Events near</h2>
+              <a href="./events.html" class="events-near__link-container">
+                <p>Mountain View, CA</p>
+                <img src="./assets/svg/pencil.svg" alt="pencil icon"
+              /></a>
+            </div>
+            <a class="see-all-events-link" href="./events.html">See all events</a>
+          </div>
+          <ul class="events-near__events-list">
+            
+          </ul>
+          <a class="see-all-events-link-mobile" href="./events.html">See all events</a>
+        </section>
+        <section class="upcoming-events">
+          <div class="upcoming-events-online">
+            <div class="upcoming-events__header">
+              <h2 class="upcoming-events__title">Upcoming online events</h2>
+              <a class="upcoming-events__see-all-events" href="./events.html"
+                >See all events</a>
+            </div>
+            <div class="events-uncoming__content">
+              <ul class="upcoming-events_list">
+              </ul>
+              <a class="upcoming-events__see-all-events-link-mobile" href="./events.html">See all events</a>
+            </div>    
+        </section>
+        <section class="join-meetup">
+          <div class="join-meetup__container">
+            <div class="join-meetup__text-container">
+              <h2>Join Meetup</h2>
+              <img
+                class="join-meetup__img-mobile"
+                src="./assets/images/raised_hands.svg"
+                alt="raised hands image"
+              />
+              <p>
+                People use Meetup to meet new people, learn new things, find
+                support, get out of their comfort zones, and pursue their
+                passions, together. Membership is free.
+              </p>
+              <button>Sign up</button>
+            </div>
+            <div class="join-meetup__img-container">
+              <img
+                src="./assets/images/raised_hands.svg"
+                alt="raised hands image"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="explore-top-categories">
+          <h2>Explore top categories</h2>
+          <ul>
+            <li>
+              <div class="explore-top-categories__link-container">
+                <a
+                  href="#"
+                  class="explore-top-categories__link-container--link"
+                >
+                  <img
+                    src="./assets/svg/categories/travel_and_outdoor.svg"
+                    alt="travel and outdoors"
+                  />
+                  <p>Travel and Outdoor</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="explore-top-categories__link-container">
+                <a
+                  href="#"
+                  class="explore-top-categories__link-container--link"
+                >
+                  <img
+                    src="./assets/svg/categories/social_activities.svg"
+                    alt="social activities"
+                  />
+                  <p>Social Activities</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="explore-top-categories__link-container">
+                <a
+                  href="#"
+                  class="explore-top-categories__link-container--link"
+                >
+                  <img
+                    src="./assets/svg/categories/hobbies_and_passions.svg"
+                    alt="hobbies and passions"
+                  />
+                  <p>Hobbies and Passions</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="explore-top-categories__link-container">
+                <a
+                  href="#"
+                  class="explore-top-categories__link-container--link"
+                >
+                  <img
+                    src="./assets/svg/categories/sports_and_fitness.svg"
+                    alt="sports and fitness"
+                  />
+                  <p>Sports and Fitness</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="explore-top-categories__link-container">
+                <a
+                  href="#"
+                  class="explore-top-categories__link-container--link"
+                >
+                  <img
+                    src="./assets/svg/categories/health_and_wellness.svg"
+                    alt="health and wellbeign"
+                  />
+                  <p>Health and Wellbeing</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="explore-top-categories__link-container">
+                <a
+                  href="#"
+                  class="explore-top-categories__link-container--link"
+                >
+                  <img
+                    src="./assets/svg/categories/technology.svg"
+                    alt="technology"
+                  />
+                  <p>Technology</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="explore-top-categories__link-container">
+                <a
+                  href="#"
+                  class="explore-top-categories__link-container--link"
+                >
+                  <img
+                    src="./assets/svg/categories/art_and_culture.svg"
+                    alt="art and culture"
+                  />
+                  <p>Art and Culture</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="explore-top-categories__link-container">
+                <a
+                  href="#"
+                  class="explore-top-categories__link-container--link"
+                >
+                  <img src="./assets/svg/categories/games.svg" alt="games" />
+                  <p>Games</p>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="popular-cities">
+          <h2>Popular cities on Meetup</h2>
+          <p>
+            Looking for fun things to do near you? See what Meetup organizers
+            are planning in cities around the country.
+          </p>
+          <ul class="popular-cities__cities-list">
+            <li>
+              <a href="#"
+                ><img
+                  class="city_img"
+                  src="./assets/images/cities/new_york.jpg"
+                  alt="New York"
+                />New York</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="city_img"
+                  src="./assets/images/cities/san_francisco.jpg"
+                  alt="San Francisco"
+                />San Francisco</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="city_img"
+                  src="./assets/images/cities/chicago.jpg"
+                  alt="Chicago"
+                />Chicago</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="city_img"
+                  src="./assets/images/cities/nashville.jpg"
+                  alt="Nashville"
+                />Nashville</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="city_img"
+                  src="./assets/images/cities/miami.jpg"
+                  alt="Miami"
+                />Miami</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section class="how-meetup-works">
+          <h2>How Meetup works</h2>
+          <div class="how-meetup-works__discover-events-container">
+            <a href="#" class="how-meetup-works__discover-link">
+              <div class="how-meetup-works__img-container">
+                <img src="./assets/svg/search.svg" alt="Search icon" />
+              </div>
+              <div class="how-meetup-works__discover-events">
+                <h3>Discover events and groups</h3>
+                <p>
+                  See who's hosting local events for all the things you love
+                </p>
+                <p class="how-meetup-works__search">Search events and groups</p>
+              </div>
+            </a>
+            <a href="#" class="how-meetup-works__discover-link">
+              <div class="how-meetup-works__img-container">
+                <img src="./assets/svg/plus.svg" alt="Search icon" />
+              </div>
+              <div class="how-meetup-works__discover-events">
+                <h3>Start a group to host events</h3>
+                <p>
+                  Create your own Meetup group, and draw from a community of
+                  millions
+                </p>
+                <p class="how-meetup-works__search">Start a group</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <section class="friendship-on-meetup">
+          <h2>Friendships are made on Meetup</h2>
+          <p class="friendship-on-meetup__text">
+            Since 2002, members have used Meetup to make new friends, meet
+            like-minded people, spend time on hobbies, and connect with locals
+            over shared interests. Learn how.
+          </p>
+          <div class="friendship-on-meetup__container">
+            <article class="friendship-on-meetup__article">
+              <a href="#">
+                <img
+                  class="friendship-img"
+                  src="./assets/images/friendship/first_article.jpg"
+                  alt="Breakfast food"
+                />
+                <h4>I Used Meetup to Make Friends at Brunch</h4>
+                <p class="friendship-on-meetup__article-text">
+                  New Jersey-based writer and college student Brianna Stryker
+                  wanted to meet friends in her hometown. Learn how she used
+                  Meetup to make connections by joining a Girls Night Out Meetup
+                  group.
+                </p>
+                <p class="friendship-on-meetup__read-more">Read more</p>
+              </a>
+            </article>
+            <article class="friendship-on-meetup__article">
+              <a href="#">
+                <img
+                  class="friendship-img"
+                  src="./assets/images/friendship/second_article.jpg"
+                  alt="Four men sitting near mountain"
+                />
+                <h4>How to Turn Casual Connections into Close Friendships</h4>
+                <p class="friendship-on-meetup__article-text">
+                  It’s proven that close friendships are harder to make as an
+                  adult. But don’t sweat it: here’s what you can do to simplify
+                  the process.
+                </p>
+                <p class="friendship-on-meetup__read-more">Read more</p>
+              </a>
+            </article>
+            <article class="friendship-on-meetup__article">
+              <a href="#">
+                <img
+                  class="friendship-img"
+                  src="./assets/images/friendship/third_article.jpg"
+                  alt="Friends are smiling"
+                />
+                <h4>Do You Have the “Right” Number of Friends?</h4>
+                <p class="friendship-on-meetup__article-text">
+                  Studies from around the world have tried to help people answer
+                  this question. Learn about the three tiers of friendship and
+                  how to fulfill them.
+                </p>
+                <p class="friendship-on-meetup__read-more">Read more</p>
+              </a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__create-group-container">
+          <p>Create your own Meetup group.</p>
+          <button>Get started</button>
+        </div>
+        <div class="footer__nav-container">
+          <nav class="footer__nav footer__nav-account">
+            <p>Your Account</p>
+            <a href="#">Sign up</a>
+            <a href="#">Login</a>
+            <a href="#">Help</a>
+            <a href="#">Become an Affiliate</a>
+          </nav>
+          <nav class="footer__nav footer__nav-discover">
+            <p>Discover</p>
+            <a href="#">Groups</a>
+            <a href="#">Calendar</a>
+            <a href="#">Topics</a>
+            <a href="#">Cities</a>
+            <a href="#">Online Events</a>
+            <a href="#">Local Guides</a>
+            <a href="#">Make Friends</a>
+          </nav>
+          <nav class="footer__nav footer__nav-meetup">
+            <p>Meetup</p>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Meetup Pro</a>
+            <a href="#">Careers</a>
+            <a href="#">Apps</a>
+            <a href="#">Podcast</a>
+          </nav>
+        </div>
+        <div class="footer__social">
+          <div class="footer__social-container">
+            <p>Follow us</p>
+            <ul class="footer__social-list">
+              <li>
+                <a href="#"
+                  ><img
+                    src="./assets/svg/social_networks/Facebook.svg"
+                    alt="facebook"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./assets/svg/social_networks/Twitter.svg"
+                    alt="twitter"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./assets/svg/social_networks/YouTube.svg"
+                    alt="youtube"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./assets/svg/social_networks/Instagram.svg"
+                    alt="instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./assets/svg/social_networks/TikTok.svg"
+                    alt="tik-tok"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__mobile-download">
+            <a href="#"
+              ><img src="./assets/svg/google_play.svg" alt="google play"
+            /></a>
+            <a href="#"
+              ><img src="./assets/svg/app_store.svg" alt="appstore"
+            /></a>
+          </div>
+        </div>
+        <div class="footer__policy-container">
+          <p>© 2024 Meetup</p>
+          <ul class="footer__policy">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Do Not Sell or Share My Personal Data</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script> -->
+    <script>
+      const eventsNear = [
+        {
+          image: "./assets/images/events-near/1.jpg",
+          title: "Day Trading Idea and Strategy",
+          topic: "Business",
+          distance: "(5 km)",
+          data: "Mon, Mar 18 · 7:00 PM PDT",
+          attendee: 1,
+          price: "Free",
+          online: false,
+        },
+        {
+          image: "./assets/images/events-near/2.jpg",
+          title: "Let's Talk Networking: JPMorgan Chase in Palo Alto",
+          topic: "Business",
+          distance: "(25 km)",
+          data: "Tue, Mar 19 · 5:00 PM PDT",
+          attendee: 41,
+          price: "Free",
+          online: false,
+        },
+        {
+          image: "./assets/images/events-near/3.jpg",
+          title:
+            "Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use Cases",
+          topic: "Technology",
+          distance: "",
+          data: "Wed, Mar 13 · 6:00 PM PDT",
+          attendee: 40,
+          price: "Free",
+          online: true,
+        },
+        {
+          image: "./assets/images/events-near/4.jpg",
+          title: "INFORMS San Francisco Chapter In-Person Event",
+          topic: "Health and Wellbeing",
+          distance: "(50 km)",
+          data: "Thu, Mar 28 · 5:00 PM PDT",
+          attendee: 41,
+          price: "Free",
+          online: false,
+        },
+        {
+          image: "./assets/images/events-near/5.jpg",
+          title: "AI Wednesdays - Meet and Greet!",
+          topic: "Technology",
+          distance: "(5 km)",
+          data: "Wed, Mar 13 · 6:30 PM PDT",
+          attendee: 29,
+          price: "Free",
+          online: false,
+        },
+        {
+          image: "./assets/images/events-near/6.jpg",
+          title: "ROS By-The-Bay March 2024",
+          topic: "Social Activities",
+          distance: "",
+          data: "Thu, Mar 21 · 6:00 PM PDT",
+          attendee: 51,
+          price: "Free",
+          online: true,
+        },
+        {
+          image: "./assets/images/events-near/7.jpg",
+          title: "Free Christian Singles' Dinner",
+          topic: "Hobbies and Passions",
+          distance: "(10 km)",
+          data: "Fri, Mar 29 · 6:00 PM PDT",
+          attendee: 11,
+          price: "Free",
+          online: false,
+        },
+        {
+          image: "./assets/images/events-near/8.jpg",
+          title: "In-person: Deep Dive into RAG Architectures (Food served)",
+          topic: "Hobbies and Passions",
+          distance: "(50 km)",
+          data: "Thu, Mar 14 · 5:00 PM PDT",
+          attendee: 16,
+          price: "Free",
+          online: false,
+        },
+      ];
+      const listEvents = document.querySelector(".events-near__events-list");
+      function renderEvents(events) {
+        return events
+          .map((event) => {
+            return `
+        <li class="events__list-item">
+          <a href="./events.html">
+          <div class="events__img">
+            ${
+              event.online
+                ? '<div class="events__online"></div>'
+                : ""
+            }
+            <img src="${event.image}" alt="${event.title} image" />
+          </div>
+          <div class="events__list-item--text-container">
+            <p class="events__list-item--date--mobile">${event.data}</p>
+            <h3 class="events__list-item--title">${event.title}</h3>
+            <div class="events__list-item--location">${event.topic} ${event.distance}</div>
+            <div class="events__list-item--data-container--desktop">
+              <img src="./assets/svg/events/calender.svg" alt="calender-icon" />
+              <p class="events__list-item--date">${event.data}</p>
+            </div>
+            <div class="events__attendees-mobile">${event.attendee} attendees</div>
+          </div>
+          <div class="events__list-item--ticket-container">
+                    <div class="events__going-container">
+                      <img src="./assets/svg/events/tick.svg" alt="tick-icon" />
+                      <div>${event.attendee} going</div>
+                    </div>
+                    <div class="events__ticket-container">
+                      <img src="./assets/svg/events/ticket.svg" alt="ticket-icon" />
+                      <p>Free</p>
+                    </div>
+          </div>
+          </a>
+        </li>
+      `;
+          })
+          .join("");
+      }
+      listEvents.innerHTML = renderEvents(eventsNear);
+    </script>
+    <script>
+      const upcomingOnlineEvents = [
+        {
+          image: "./assets/images/upcoming-events/1.jpg",
+          title:
+            "Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers",
+          topic: "Business",
+          distance: "(25 km)",
+          data: "Thu, Mar 14 · 6:00 PM PDT",
+          attendee: 3,
+          price: "Free",
+          online: true,
+        },
+        {
+          image: "./assets/images/upcoming-events/2.jpg",
+          title: "Vision Pro Developers Online Meetup",
+          topic: "Technology",
+          distance: "",
+          data: "Wed, Mar 13 · 7:00 PM PDT",
+          attendee: 51,
+          price: "Free",
+          online: true,
+        },
+        {
+          image: "./assets/images/upcoming-events/3.jpg",
+          title: "Significant Musical Moments",
+          topic: "Hobbies and Passions",
+          distance: "(10 km)",
+          data: "Wed, Mar 13 · 6:00 PM PDT",
+          attendee: 16,
+          price: "Free",
+          online: true,
+        },
+        {
+          image: "./assets/images/upcoming-events/4.jpg",
+          title: "FREE Webinar : Introduction to Power BI",
+          topic: "Technology",
+          distance: "",
+          data: "Thu, Mar 14 · 5:30 PM PDT",
+          attendee: 33,
+          price: "Free",
+          online: true,
+        },
+      ];
+
+      const listUpcomingOnlineEvents = document.querySelector(".upcoming-events_list");
+      function renderEvents(events) {
+        return events
+          .map((event) => {
+            return `
+        <li class="upcoming-events__list-item">
+          <a href="./events.html">
+          <div class="upcoming-events__img">
+            <img src="${event.image}" alt="${event.title} image" />
+          </div>
+          <div class="upcoming-events__list-item--text-container">
+            <p class="upcoming-events__list-item--date--mobile">${event.data}</p>
+            <h3 class="upcoming-events__list-item--title">${event.title}</h3>
+            <div class="upcoming-events__list-item--location">${event.topic} ${event.distance}</div>
+            <div class="upcoming-events__list-item--data-container--desktop">
+              <img src="./assets/svg/events/calender.svg" alt="calender-icon" />
+              <p class="upcoming-events__list-item--date">${event.data}</p>
+            </div>
+            <div class="upcoming-events__attendees-mobile">${event.attendee} attendees</div>
+          </div>
+          <div class="upcoming-events__list-item--ticket-container">
+                    <div class="upcoming-events__going-container">
+                      <img src="./assets/svg/events/tick.svg" alt="tick-icon" />
+                      <div>${event.attendee} going</div>
+                    </div>
+                    <div class="upcoming-events__ticket-container">
+                      <img src="./assets/svg/events/ticket.svg" alt="ticket-icon" />
+                      <p>Free</p>
+                    </div>
+            </div>
+          </a>
+        </li>
+      `;
+          })
+          .join(""); // Соединяем массив строк в одну строку
+      }
+
+      // Отображаем элементы на странице
+      listUpcomingOnlineEvents.innerHTML = renderEvents(upcomingOnlineEvents);
+    </script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

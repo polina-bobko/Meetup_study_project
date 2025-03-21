@@ -1,0 +1,74 @@
+@use "./reset";
+@use "./variables" as var;
+@use "./mixins" as mixin;
+
+@use "./header";
+@use "./main_page/intro";
+@use "./main_page/events-near";
+@use "./main_page/upcoming-events";
+@use "./main_page/join-meetup";
+@use "./main_page/top-categoties";
+@use "./main_page/popular_cities";
+@use "./main_page/how-meetup-works";
+@use "./main_page/meetup-friendship";
+@use "./events";
+@use "./footer";
+
+/* MAIN */
+
+body {
+  min-height: 100vh;
+}
+
+.main {
+  margin: 50px auto;
+  flex: 1;
+  min-height: 50vh;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1196px;
+    margin: 0 auto;
+    gap: 64px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .main {
+    &__container {
+      max-width: 1000px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    &__container {
+      max-width: 900px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 20px auto;
+
+    &__container {
+      max-width: 500px;
+      gap: 35px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .main {
+    margin: 10px auto;
+
+    &__container {
+      max-width: 390px;
+      gap: 20px;
+    }
+  }
+}
